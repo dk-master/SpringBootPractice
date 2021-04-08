@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BoardApplicationTests.testByApplicationContext" project="Board" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.board.BoardApplicationTests" time="0.428" displayname="BoardApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.board.BoardApplicationTests]">
+    <testcase name="testByApplicationContext" classname="com.board.BoardApplicationTests" time="0.428" displayname="testByApplicationContext()" uniqueid="[engine:junit-jupiter]/[class:com.board.BoardApplicationTests]/[method:testByApplicationContext()]"/>
+  </testsuite>
+</testrun>

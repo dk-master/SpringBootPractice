@@ -1,0 +1,12 @@
+1617634669657	Encapsulate field 'title'
+1617634842861	Encapsulate field 'idx'
+1617634849372	Encapsulate field 'content'
+1617634854481	Encapsulate field 'writer'
+1617634866814	Encapsulate field 'viewCnt'
+1617634872972	Encapsulate field 'noticeYn'
+1617634878420	Encapsulate field 'secretYn'
+1617634885080	Encapsulate field 'deleteYn'
+1617634889340	Encapsulate field 'insertTime'
+1617634894900	Encapsulate field 'updateTime'
+1617634899403	Encapsulate field 'deleteTime'
+1617666032720	Delete element
