@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MapperTests.testOfSelectDetail" project="Board" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.board.MapperTests" time="0.528" displayname="MapperTests" uniqueid="[engine:junit-jupiter]/[class:com.board.MapperTests]">
-    <testcase name="testOfSelectDetail" classname="com.board.MapperTests" time="0.528" displayname="testOfSelectDetail()" uniqueid="[engine:junit-jupiter]/[class:com.board.MapperTests]/[method:testOfSelectDetail()]"/>
-  </testsuite>
-</testrun>

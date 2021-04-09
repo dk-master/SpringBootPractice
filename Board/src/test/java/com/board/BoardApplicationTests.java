@@ -42,5 +42,6 @@ class BoardApplicationTests {
 			e.printStackTrace();
 		}
 	}
+	
 
 }
