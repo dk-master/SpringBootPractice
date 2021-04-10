@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>The page is a write page</title>
+	</head>
+	<body>
+		<h2>Welcome Spring Boot!</h2>
+	</body>
+</html>

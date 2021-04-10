@@ -1,0 +1,39 @@
+package com.board.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.board.domain.BoardDTO;
+import com.board.service.BoardService;
+
+// UI를 담당하는 controller
+@Controller
+public class BoardController {
+
+	@Autowired
+	private BoardService boardService;
+
+	@GetMapping(value = "/board/write.do") //스프링 4.3버전부터는 요청 메서드의 타입별로 매핑을 처리할 수 있는 에너테이션 추가
+	
+	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
+//		String title = "제목";
+//		String content = "내용";
+//		String writer = "김동관";
+//		
+//		model.addAttribute("title", title);
+//		model.addAttribute("content", content);
+//		model.addAttribute("writer", writer);
+		if (idx == null) {
+			model.addAttribute("board", new BoardDTO());
+		}else {
+			BoardDTO board = boardService.getBoardDetail(idx);
+			if(board == null) {
+				return "redirect:/board/list.do";
+			}
+			 model.addAttribute("board", board);
+		}
+		return "board/write"; 
+	}
