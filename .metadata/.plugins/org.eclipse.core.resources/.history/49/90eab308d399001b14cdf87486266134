@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.board.domain.CommentDTO;
 import com.board.service.CommentService;
 import com.google.gson.Gson;
@@ -54,7 +53,7 @@ public class CommentController {
 		
 		@GetMapping(value = "/comments/{boardIdx}")
 		//PathVariable 은 requestParam과 비슷한 역할을 하고 url {boardIdx}와 매핑된다.
-		public JsonObject getCommentList(@PathVariable("boardIdx") Long boardIdx, @ModelAttribute("params") CommentDTO params) {
+		public JsonObject getCommentList(@PathVariable("boardIdx") Long boardIdx, @ModelAttribute("params")) {
 				JsonObject jsonObj = new JsonObject();
 				System.out.println(jsonObj);
 				System.out.println("-----------------------------");
