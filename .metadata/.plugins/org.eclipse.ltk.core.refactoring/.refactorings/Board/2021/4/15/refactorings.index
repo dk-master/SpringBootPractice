@@ -11,3 +11,14 @@
 1617634899403	Encapsulate field 'deleteTime'
 1617666032720	Delete element
 1617894662691	Delete element
+1618031787650	Rename package 'com.board.Controller'
+1618032298751	Delete element
+1618034145865	Encapsulate field 'idx'
+1618034158685	Encapsulate field 'content'
+1618034163508	Encapsulate field 'writer'
+1618034177714	Encapsulate field 'deleteYn'
+1618034185630	Encapsulate field 'boardIdx'
+1618034190145	Encapsulate field 'insertTime'
+1618034194449	Encapsulate field 'updateTime'
+1618034198166	Encapsulate field 'deleteTime'
+1618037127442	Delete element

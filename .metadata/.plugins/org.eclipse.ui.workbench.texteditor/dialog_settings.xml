@@ -8,6 +8,16 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="script"/>
+			<item value="저장하기"/>
+			<item value="저장"/>
+			<item value="write.do"/>
+			<item value="write"/>
+			<item value="paging"/>
+			<item value="wrapper"/>
+			<item value="navi"/>
+			<item value="page"/>
+			<item value="search"/>
 			<item value="gitignore"/>
 		</list>
 		<list key="replacehistory">

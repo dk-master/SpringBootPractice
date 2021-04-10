@@ -1,0 +1,16 @@
+package com.board.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class TestController {
+	
+		@GetMapping(value = "/message")
+		@ResponseBody
+		public String testByResponseBody() {
+			String message = "안녕하세요 Restful API 입니다.";
+			return message;
+		}
+	}
