@@ -33,7 +33,7 @@ public class RestBoardController {
 		List<BoardDTO> boardList = boardService.getBoardList();
 		if (CollectionUtils.isEmpty(boardList) == false) {
 			JsonArray jsonArr = new Gson().toJsonTree(boardList).getAsJsonArray();
-			jsonObj.add("boardList", jsonArr);
+			jsonObj.add("commentList", jsonArr);
 		}
 
 		return jsonObj;

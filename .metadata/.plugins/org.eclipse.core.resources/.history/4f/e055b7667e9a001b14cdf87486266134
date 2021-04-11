@@ -23,7 +23,7 @@ public class RestBoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	//게시물 보기
+	//Get BoardList
 	
 	@GetMapping(value = "/board")
 	public JsonObject getBoardList() {
@@ -33,13 +33,13 @@ public class RestBoardController {
 		List<BoardDTO> boardList = boardService.getBoardList();
 		if (CollectionUtils.isEmpty(boardList) == false) {
 			JsonArray jsonArr = new Gson().toJsonTree(boardList).getAsJsonArray();
-			jsonObj.add("boardList", jsonArr);
+			jsonObj.add("commentList", jsonArr);
 		}
 
 		return jsonObj;
 	}
 
-	// 게시물 등록
+	// POST Board
 	
 	@PostMapping(value = "/board")
 	public JsonObject addBoard(@RequestBody final BoardDTO params) {
@@ -54,7 +54,7 @@ public class RestBoardController {
 		}
 		return jsonObj;
 	}
-	// 게시물 수정
+	
 	@PostMapping(value= {"/board/{idx}"})
 	public JsonObject updateBoard(@PathVariable(value = "idx")Long idx, 
 			@RequestBody final BoardDTO params) {
@@ -62,7 +62,7 @@ public class RestBoardController {
 		try {
 			params.setIdx(idx);
 			boolean isUpdate = boardService.registerBoard(params);
-			jsonObj.addProperty("result", "게시물을 수정하는데 성공했습니.");
+			jsonObj.addProperty("result", "게시물이 수정됐습니다.");
 		}catch (DataAccessException e) {
 			jsonObj.addProperty("message", "데이터베이스 처리 과정에 문제가 발생하였씁니다.");
 		}catch(Exception e) {
@@ -71,21 +71,4 @@ public class RestBoardController {
 		return jsonObj;
 	}
 	
-	// 게시물 삭제
-	@PostMapping(value="/board/del/{idx}")
-	public JsonObject deleteBoard(@PathVariable("idx") final Long idx){
-		JsonObject jsonObj = new JsonObject();
-		try {
-			boolean isDeleted = boardService.deleteBoard(idx);
-			if(isDeleted) {
-				jsonObj.addProperty("result", "게시물 삭제에 성공했습니다.");
-			}
-		}catch(DataAccessException e) {
-			jsonObj.addProperty("message", "데이터베이스 처리 과정에 문제가 발");
-		}
-		catch(Exception e) {
-			jsonObj.addProperty("message", "서버에");
-		}
-		return jsonObj;
-	}
 }
