@@ -39,7 +39,7 @@ public class RestBoardController {
 		return jsonObj;
 	}
 	
-	// 게시물 등록!
+	// 게시물 등록
 	
 	@PostMapping(value = "/board")
 	public JsonObject addBoard(@RequestBody final BoardDTO params) {
